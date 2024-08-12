@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Gameplay.Common.Actions.ChangeColor
+namespace Gameplay.Entities.Common.Actions.ChangeColor
 {
     [CreateAssetMenu(fileName = "NewChangeColorSettings", menuName = "Gameplay/Common/Color/Change Color Settings")]
     public class ChangeColorSettings : ScriptableObject

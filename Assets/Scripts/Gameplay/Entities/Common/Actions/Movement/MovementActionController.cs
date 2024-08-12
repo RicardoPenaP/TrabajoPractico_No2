@@ -1,9 +1,8 @@
 using Gameplay.Input;
-using System;
 using UnityEngine;
 using static UnityEngine.Input;
 
-namespace Gameplay.Common.Actions.Movement
+namespace Gameplay.Entities.Common.Actions.Movement
 {
     public class MovementActionController : TargetActionController<Transform>
     {

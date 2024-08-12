@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace Gameplay.Common.Actions
+namespace Gameplay.Entities.Common.Actions
 {
     public abstract class LerpTargetActionController<T> : TargetActionController<T> where T : Component
     {

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Gameplay.Common.Actions
+namespace Gameplay.Entities.Common.Actions
 {
     public abstract class TargetActionController<T> : IUpdatableAction where T : Component
     {

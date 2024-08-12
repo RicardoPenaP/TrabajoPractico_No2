@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Gameplay.Common.Actions.Rotation
+namespace Gameplay.Entities.Common.Actions.Rotation
 {
     [CreateAssetMenu(fileName = "NewRotationSettings", menuName = "Gameplay/Common/Rotation/Rotation Settings")]
     public class RotationSettings : ScriptableObject

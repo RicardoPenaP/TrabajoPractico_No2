@@ -1,13 +1,13 @@
-using Gameplay.Common.Actions;
-using Gameplay.Common.Actions.ChangeColor;
-using Gameplay.Common.Actions.Jump;
-using Gameplay.Common.Actions.Movement;
-using Gameplay.Common.Actions.Rotation;
+using Gameplay.Entities.Common.Actions;
+using Gameplay.Entities.Common.Actions.ChangeColor;
+using Gameplay.Entities.Common.Actions.Jump;
+using Gameplay.Entities.Common.Actions.Movement;
+using Gameplay.Entities.Common.Actions.Rotation;
 using Gameplay.Input;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gameplay.Square
+namespace Gameplay.Entities.Square
 {
     public class SquareController : MonoBehaviour
     {

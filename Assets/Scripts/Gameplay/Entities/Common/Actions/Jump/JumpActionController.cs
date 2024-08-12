@@ -1,10 +1,10 @@
-using Gameplay.Common.Actions.Movement;
+using Gameplay.Entities.Common.Actions.Movement;
 using Gameplay.Input;
 using System.Collections;
 using UnityEngine;
 using static UnityEngine.Input;
 
-namespace Gameplay.Common.Actions.Jump
+namespace Gameplay.Entities.Common.Actions.Jump
 {
     public class JumpActionController : LerpTargetActionController<Transform>
     {

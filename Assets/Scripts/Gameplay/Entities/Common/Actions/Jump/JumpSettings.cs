@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Gameplay.Common.Actions.Jump
+namespace Gameplay.Entities.Common.Actions.Jump
 {
     [CreateAssetMenu(fileName = "NewJumpSettings", menuName = "Gameplay/Common/Jump/Jump Settings")]
     public class JumpSettings : ScriptableObject

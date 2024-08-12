@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Gameplay.Common.Actions.Movement
+namespace Gameplay.Entities.Common.Actions.Movement
 {
     [CreateAssetMenu(fileName = "NewMovementSettings", menuName = "Gameplay/Common/Movement/Movement Settings")]
     public class MovementSettings : ScriptableObject

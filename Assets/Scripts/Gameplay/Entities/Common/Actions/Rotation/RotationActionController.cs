@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using static UnityEngine.Input;
 
-namespace Gameplay.Common.Actions.Rotation
+namespace Gameplay.Entities.Common.Actions.Rotation
 {
     public class RotationActionController : LerpTargetActionController<Transform>
     {

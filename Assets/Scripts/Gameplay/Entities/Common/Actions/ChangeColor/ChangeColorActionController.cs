@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using static UnityEngine.Input;
 
-namespace Gameplay.Common.Actions.ChangeColor
+namespace Gameplay.Entities.Common.Actions.ChangeColor
 {
     public class ChangeColorActionController : LerpTargetActionController<SpriteRenderer>
     {
