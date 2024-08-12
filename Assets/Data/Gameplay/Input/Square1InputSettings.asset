@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47cb2063f87f2734e9378d437ba4e3c7, type: 3}
+  m_Name: Square1InputSettings
+  m_EditorClassIdentifier: 
+  _useMouseInput: 0
+  _moveUpInputKey: 119
+  _moveDownInputKey: 115
+  _moveLeftInputKey: 97
+  _moveRightInputKey: 100
+  _rotateLeftInputKey: 113
+  _rotateRightInputKey: 101
+  _changeColorInputKey: 114
+  _jumpInputKey: 32
