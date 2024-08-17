@@ -5,10 +5,13 @@ namespace Menus.Common
 {
     public class MenuPanel : MonoBehaviour
     {
+        #region Editor Variables
         [Header("Menu Panel")]
         [Header("References")]
         [SerializeField] private MenuPanelButton[] _panelButtons = null;
+        #endregion
 
+        #region Public Methods
         public void SubcribeToButtonOnClick(int buttonIndex, Action callback)
         {
             if (!ValidButtonIndexCheck(buttonIndex))
@@ -36,11 +39,15 @@ namespace Menus.Common
                 panelButtons.ClearOnClickEvent();
             }
         }
+        #endregion
 
+        #region Private Methods
         private bool ValidButtonIndexCheck(int index)
         {
             return index >= 0 || index < _panelButtons.Length;           
         }
+        #endregion
+
 
     }
 }
