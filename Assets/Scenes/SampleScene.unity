@@ -258,9 +258,21 @@ PrefabInstance:
       propertyPath: _inputSettings
       value: 
       objectReference: {fileID: 11400000, guid: ef32ca5dd4b4da14781455fd3b5f47b2, type: 2}
+    - target: {fileID: 4845239900234771564, guid: 335bcb62ea1d8074986c54c44d65324d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8822825
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845239900234771564, guid: 335bcb62ea1d8074986c54c44d65324d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.004182993
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845239900234771564, guid: 335bcb62ea1d8074986c54c44d65324d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8867924
+      objectReference: {fileID: 0}
     - target: {fileID: 6303238654641227108, guid: 335bcb62ea1d8074986c54c44d65324d, type: 3}
       propertyPath: m_Name
-      value: Square (1)
+      value: Player2
       objectReference: {fileID: 0}
     - target: {fileID: 6303238654641227108, guid: 335bcb62ea1d8074986c54c44d65324d, type: 3}
       propertyPath: m_IsActive
@@ -676,7 +688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6303238654641227108, guid: 335bcb62ea1d8074986c54c44d65324d, type: 3}
       propertyPath: m_Name
-      value: Square
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 8547867085648479726, guid: 335bcb62ea1d8074986c54c44d65324d, type: 3}
       propertyPath: m_LocalPosition.x
