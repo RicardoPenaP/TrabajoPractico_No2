@@ -7,9 +7,12 @@ namespace Gameplay.Entities.Common.Actions.ChangeColor
 {
     public class ChangeColorActionController : LerpTargetActionController<SpriteRenderer>
     {
+        #region Variables
         private readonly ChangeColorSettings _settings;       
         private readonly IChangeColorInputSettings _changeColorInputSettings;
+        #endregion
 
+        #region Constructors
         public ChangeColorActionController(
             ChangeColorSettings settings,
             SpriteRenderer targetSpriteRenderer,
@@ -19,8 +22,9 @@ namespace Gameplay.Entities.Common.Actions.ChangeColor
             _settings = settings;            
             _changeColorInputSettings = changeColorInputSettings;
         }
+        #endregion
 
-
+        #region Interface Methods
         public override void UpdateAction()
         {
             if (_isLerping)
@@ -33,7 +37,9 @@ namespace Gameplay.Entities.Common.Actions.ChangeColor
                 StartLerping();
             }
         }
+        #endregion
 
+        #region Private Methods
         private Color GetRandomColor()
         {
             Color randomColor = Color.black;
@@ -44,7 +50,9 @@ namespace Gameplay.Entities.Common.Actions.ChangeColor
 
             return randomColor;
         }
+        #endregion
 
+        #region Coroutines
         protected override IEnumerator LerpRoutine()
         {
             _isLerping = true;
@@ -70,8 +78,7 @@ namespace Gameplay.Entities.Common.Actions.ChangeColor
 
             _isLerping = false;
         }
-
-
+        #endregion
     }
 }
 

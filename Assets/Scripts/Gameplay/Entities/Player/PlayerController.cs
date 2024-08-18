@@ -8,9 +8,9 @@ using System.Collections.Generic;
 using Menus.PauseMenu;
 using UnityEngine;
 
-namespace Gameplay.Entities.Square
+namespace Gameplay.Entities.Player
 {
-    public class SquareController : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
         [Header("Square Controller")]
         [Header("References")]

@@ -7,11 +7,14 @@ namespace Gameplay.Entities.Common.Actions.Rotation
 {
     public class RotationActionController : LerpTargetActionController<Transform>
     {
+        #region Variables
         private readonly RotationSettings _settings;
         private readonly IRotationInputSettings _movementInputSettings;
 
         private float _rotationDirection = 0f;
+        #endregion
 
+        #region Constructors
         public RotationActionController(
             RotationSettings settings,
             Transform targetTransform,
@@ -22,12 +25,16 @@ namespace Gameplay.Entities.Common.Actions.Rotation
             _movementInputSettings = movementInputSettings;
 
         }
+        #endregion
 
+        #region Interface Methods
         public override void UpdateAction()
         {
             GetRotationInput();
         }
+        #endregion
 
+        #region Private Methods
         private void GetRotationInput()
         {
             if (_isLerping)
@@ -47,8 +54,9 @@ namespace Gameplay.Entities.Common.Actions.Rotation
                 StartLerping();
             }
         }
+        #endregion
 
-
+        #region Coroutines
         protected override IEnumerator LerpRoutine()
         {
             _isLerping = true;
@@ -67,6 +75,8 @@ namespace Gameplay.Entities.Common.Actions.Rotation
 
             _isLerping = false;
         }
+        #endregion
+        
     }
 }
 

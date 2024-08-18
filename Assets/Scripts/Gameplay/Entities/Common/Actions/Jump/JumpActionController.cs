@@ -8,10 +8,13 @@ namespace Gameplay.Entities.Common.Actions.Jump
 {
     public class JumpActionController : LerpTargetActionController<Transform>
     {
+        #region Variables
         private readonly JumpSettings _settings;
         private readonly IJumpInputSettings _movementInputSettings;
         private readonly MovementActionController _movementController;
+        #endregion
 
+        #region Constructors
         public JumpActionController(
             JumpSettings settings,
             Transform targetTransform,
@@ -23,7 +26,9 @@ namespace Gameplay.Entities.Common.Actions.Jump
             _movementInputSettings = movementInputSettings;
             _movementController = movementController;
         }
+        #endregion
 
+        #region Interface Methods
         public override void UpdateAction()
         {
             if (_isLerping)
@@ -36,7 +41,9 @@ namespace Gameplay.Entities.Common.Actions.Jump
                 StartLerping();
             }
         }
+        #endregion
 
+        #region Coroutines
         protected override IEnumerator LerpRoutine()
         {
             float startingY = _target.position.y;
@@ -69,6 +76,10 @@ namespace Gameplay.Entities.Common.Actions.Jump
                 _movementController.SetCanMoveVertically(true);
             }
         }
+        
+
+        #endregion
+
 
 
     }

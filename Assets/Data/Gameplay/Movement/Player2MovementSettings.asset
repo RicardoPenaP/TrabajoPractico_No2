@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ed668951dc279649b57696725162e3d, type: 3}
-  m_Name: SquareChangeColorSettings
+  m_Script: {fileID: 11500000, guid: f252c04e8c1712c48944740d5de01a7c, type: 3}
+  m_Name: Player2MovementSettings
   m_EditorClassIdentifier: 
-  _changeColorWithLerp: 1
-  _lerpDuration: 0.5
+  _maxMovementSpeed: 20
+  _movementSpeed: 20

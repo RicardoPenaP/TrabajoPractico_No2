@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bac8fdec2d4179489a81fc88c20e0fe, type: 3}
-  m_Name: SquareJumpSettings
+  m_Script: {fileID: 11500000, guid: f252c04e8c1712c48944740d5de01a7c, type: 3}
+  m_Name: Player1MovementSettings
   m_EditorClassIdentifier: 
-  _jumpDistance: 2
-  _jumpSpeed: 4
+  _maxMovementSpeed: 20
+  _movementSpeed: 20

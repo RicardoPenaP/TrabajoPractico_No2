@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47cb2063f87f2734e9378d437ba4e3c7, type: 3}
-  m_Name: Square2InputSettings
+  m_Name: Player1InputSettings
   m_EditorClassIdentifier: 
   _useMouseInput: 0
-  _moveUpInputKey: 273
-  _moveDownInputKey: 274
-  _moveLeftInputKey: 276
-  _moveRightInputKey: 275
-  _rotateLeftInputKey: 44
-  _rotateRightInputKey: 46
-  _changeColorInputKey: 303
-  _jumpInputKey: 305
+  _moveUpInputKey: 119
+  _moveDownInputKey: 115
+  _moveLeftInputKey: 97
+  _moveRightInputKey: 100
+  _rotateLeftInputKey: 113
+  _rotateRightInputKey: 101
+  _changeColorInputKey: 114
+  _jumpInputKey: 32

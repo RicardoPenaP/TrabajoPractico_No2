@@ -5,6 +5,7 @@ namespace Gameplay.Entities.Common.Actions.Rotation
     [CreateAssetMenu(fileName = "NewRotationSettings", menuName = "Gameplay/Common/Rotation/Rotation Settings")]
     public class RotationSettings : ScriptableObject
     {
+        #region Editor Variables
         [Header("Rotation Settings")]
         [SerializeField] private float _rotationStep = 10f;
         public float rotationStep => _rotationStep;
@@ -15,5 +16,7 @@ namespace Gameplay.Entities.Common.Actions.Rotation
         [Tooltip("Lerp duration in seconds")]
         [SerializeField] private float _lerpDuration = 0.5f;
         public float lerpDuration => _lerpDuration;
+        #endregion
+       
     }
 }

@@ -6,20 +6,38 @@ namespace Gameplay.Entities.Common.Actions.Movement
 {
     public class MovementActionController : TargetActionController<Transform>
     {
+        #region Variables
         private readonly MovementSettings _settings = null;        
         private readonly IMovementInputSettings _movementInputSettings = null;
         private bool _canMoveVertically = true;
+        #endregion
 
-        public MovementActionController(MovementSettings settings, Transform targetTransform, IMovementInputSettings movementInputSettings) : base (targetTransform)
+        #region Constructors
+        public MovementActionController(
+            MovementSettings settings,
+            Transform targetTransform,
+            IMovementInputSettings movementInputSettings) : base (targetTransform)
         {
             _settings = settings;            
             _movementInputSettings = movementInputSettings;
         }
+        #endregion
 
+        #region Interface Methods
         public override void UpdateAction()
         {
             SetMovementInput();
         }
+        #endregion
+
+        #region Public Methods
+        public void SetCanMoveVertically(bool state)
+        {
+            _canMoveVertically = state;
+        }
+        #endregion
+        
+        #region Private Methods
 
         private void SetMovementInput()
         {
@@ -86,11 +104,8 @@ namespace Gameplay.Entities.Common.Actions.Movement
 
             Move(movementDirection.normalized);
         }
+        #endregion
 
-        public void SetCanMoveVertically(bool state)
-        {
-            _canMoveVertically = state;
-        }
 
     }
 }
