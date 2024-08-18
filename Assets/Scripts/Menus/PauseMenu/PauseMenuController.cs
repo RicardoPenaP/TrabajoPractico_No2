@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 namespace Menus.PauseMenu
@@ -53,12 +54,25 @@ namespace Menus.PauseMenu
         private void Init()
         {
             _menuModel.OnPauseStatusChange += MenuModel_OnPauseStatusChange;
+            
+            // Main Panel setup
             List<Action> mainPanelButtonsActions = new List<Action>();
-
-            mainPanelButtonsActions.Add(TogglePause);
-            mainPanelButtonsActions.Add(OpenSettingsPanel);
-
+            mainPanelButtonsActions.Add(MainPanel_PlayButton);
+            mainPanelButtonsActions.Add(MainPanel_SettingsButton);
+            mainPanelButtonsActions.Add(MainPanel_CreditsButton);
+            mainPanelButtonsActions.Add(MainPanel_ExitButton);
             _menuView.SetUpCallBacks((int)PauseMenuPanels.Main, mainPanelButtonsActions);
+            
+            // Settings Panel setup
+            List<Action> settingsPanelButtonActions = new List<Action>();
+            settingsPanelButtonActions.Add(SettingsPanel_BackButton);
+            _menuView.SetUpCallBacks((int)PauseMenuPanels.Settings, settingsPanelButtonActions);
+            
+            // Credits Panel setup
+            List<Action> creditsPanelButtonActions = new List<Action>();
+            creditsPanelButtonActions.Add(CreditsPanel_BackButton);
+            _menuView.SetUpCallBacks((int)PauseMenuPanels.Credits, settingsPanelButtonActions);
+
         }
 
         private void Deinit()
@@ -73,15 +87,47 @@ namespace Menus.PauseMenu
                 TogglePause();
             }
         }
-
+        
         private void TogglePause()
         {
             _menuModel.SetIsPaused(!_menuModel.isPaused);
         }
-
-        private void OpenSettingsPanel()
+        
+        // Main Panel buttons actions
+        private void MainPanel_PlayButton()
+        {
+            TogglePause();
+        }
+        
+        private void MainPanel_SettingsButton()
         {
             _menuView.OpenViewPanel((int)PauseMenuPanels.Settings);
+        }
+
+        private void MainPanel_CreditsButton()
+        {
+            _menuView.OpenViewPanel((int)PauseMenuPanels.Credits);
+        }
+
+        private void MainPanel_ExitButton()
+        {
+#if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+#else
+              Application.Quit();
+#endif
+        }
+        
+        // Settings Panel buttons actions
+        private void SettingsPanel_BackButton()
+        {
+            _menuView.OpenViewPanel((int)PauseMenuPanels.Main);
+        }
+        
+        // Credits Panel buttons actions
+        private void CreditsPanel_BackButton()
+        {
+            _menuView.OpenViewPanel((int)PauseMenuPanels.Main);
         }
         #endregion
 

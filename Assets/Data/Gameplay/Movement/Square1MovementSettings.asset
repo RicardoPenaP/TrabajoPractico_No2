@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f252c04e8c1712c48944740d5de01a7c, type: 3}
   m_Name: Square1MovementSettings
   m_EditorClassIdentifier: 
-  _movementSpeed: 10
+  _maxMovementSpeed: 20
+  _movementSpeed: 20

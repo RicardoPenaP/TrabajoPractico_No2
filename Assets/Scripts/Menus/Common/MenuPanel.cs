@@ -12,7 +12,6 @@ namespace Menus.Common
         #endregion
 
         #region Public Methods
-
         public void SetPanelActiveInHierarchy(bool state)
         {
             if (gameObject.activeSelf == state)
@@ -31,16 +30,6 @@ namespace Menus.Common
             }
 
             _panelButtons[buttonIndex].OnClickButtonEvent += callback;
-        }
-
-        public void UnSubcribeToButtonOnClick(int buttonIndex, Action callback)
-        {
-            if (!ValidButtonIndexCheck(buttonIndex))
-            {
-                return;
-            }
-
-            _panelButtons[buttonIndex].OnClickButtonEvent -= callback;
         }
         
         public void ClearButtonsOnClickEvent()
