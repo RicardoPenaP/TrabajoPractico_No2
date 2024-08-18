@@ -1,9 +1,16 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Menus.PauseMenu
 {
+    public enum PauseMenuPanels
+    {
+        Main,
+        Settings,
+        Credits
+    }
     public class PauseMenuController : MonoBehaviour
     {
         #region Editor Variables
@@ -49,8 +56,9 @@ namespace Menus.PauseMenu
             List<Action> mainPanelButtonsActions = new List<Action>();
 
             mainPanelButtonsActions.Add(TogglePause);
+            mainPanelButtonsActions.Add(OpenSettingsPanel);
 
-            _menuView.SetUpCallBacks(0, mainPanelButtonsActions);
+            _menuView.SetUpCallBacks((int)PauseMenuPanels.Main, mainPanelButtonsActions);
         }
 
         private void Deinit()
@@ -69,6 +77,11 @@ namespace Menus.PauseMenu
         private void TogglePause()
         {
             _menuModel.SetIsPaused(!_menuModel.isPaused);
+        }
+
+        private void OpenSettingsPanel()
+        {
+            _menuView.OpenViewPanel((int)PauseMenuPanels.Settings);
         }
         #endregion
 

@@ -12,6 +12,17 @@ namespace Menus.Common
         #endregion
 
         #region Public Methods
+
+        public void SetPanelActiveInHierarchy(bool state)
+        {
+            if (gameObject.activeSelf == state)
+            {
+                return;
+            }
+            
+            gameObject.SetActive(state);
+        }
+        
         public void SubcribeToButtonOnClick(int buttonIndex, Action callback)
         {
             if (!ValidButtonIndexCheck(buttonIndex))
@@ -44,7 +55,7 @@ namespace Menus.Common
         #region Private Methods
         private bool ValidButtonIndexCheck(int index)
         {
-            return index >= 0 || index < _panelButtons.Length;           
+            return index >= 0 && index < _panelButtons.Length;           
         }
         #endregion
 

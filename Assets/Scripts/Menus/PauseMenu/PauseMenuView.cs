@@ -46,6 +46,26 @@ namespace Menus.PauseMenu
         {
             gameObject.SetActive(state);
         }
+
+        public void OpenViewPanel(int index)
+        {
+            if (!ValidPanelIndexCheck(index))
+            {
+                return;
+            }
+            
+            for (int i = 0; i < _menuPanels.Length; i++)
+            {
+                if (i == index)
+                {
+                    _menuPanels[i].SetPanelActiveInHierarchy(true);
+                }
+                else
+                {
+                    _menuPanels[i].SetPanelActiveInHierarchy(false);
+                }
+            }
+        }
         #endregion
 
         #region Private Methods
