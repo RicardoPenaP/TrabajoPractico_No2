@@ -28,6 +28,7 @@ namespace Menus.PauseMenu
 
         #region Variables
 
+        public bool isPaused => _menuModel.isPaused;
         #endregion
 
         #region Unity Methods

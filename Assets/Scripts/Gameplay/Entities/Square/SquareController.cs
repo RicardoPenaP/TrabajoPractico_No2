@@ -5,6 +5,7 @@ using Gameplay.Entities.Common.Actions.Movement;
 using Gameplay.Entities.Common.Actions.Rotation;
 using Gameplay.Input;
 using System.Collections.Generic;
+using Menus.PauseMenu;
 using UnityEngine;
 
 namespace Gameplay.Entities.Square
@@ -52,6 +53,11 @@ namespace Gameplay.Entities.Square
                 return;
             }
 
+            if (PauseMenuController.instance.isPaused)
+            {
+                return;
+            }
+            
             foreach (IUpdatableAction actionController in _actionControllers)
             {
                 actionController.UpdateAction();

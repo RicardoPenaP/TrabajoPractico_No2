@@ -13,6 +13,7 @@ namespace Menus.PauseMenu
         public void SetIsPaused(bool state)
         {
             _isPaused = state;
+            Time.timeScale = _isPaused ? 0f : 1f;
             OnPauseStatusChange?.Invoke(_isPaused);
         }
 
