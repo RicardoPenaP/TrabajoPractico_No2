@@ -45,7 +45,12 @@ namespace Menus.PauseMenu
         #region Callbacks
         private void MenuModel_OnPauseStatusChange(bool state)
         {
+            if (state)
+            {
+                _menuView.OpenViewPanel((int)PauseMenuPanels.Main);
+            }
             _menuView.SetViewState(state);
+            
         }
 
         #endregion
