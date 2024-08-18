@@ -38,7 +38,6 @@ namespace Gameplay.Entities.Common.Actions.Movement
         #endregion
         
         #region Private Methods
-
         private void SetMovementInput()
         {
             if (_movementInputSettings.useMouseInput)
@@ -54,6 +53,19 @@ namespace Gameplay.Entities.Common.Actions.Movement
         private void Move(Vector2 movementDirection)
         {
             _target.position = (Vector2)_target.position + movementDirection * _settings.movementSpeed * Time.deltaTime;
+            SetFacingDirection(movementDirection.x);
+        }
+        
+        private void SetFacingDirection(float direction)
+        {
+            Debug.Log(direction);
+            if (Mathf.Abs(direction) <= Mathf.Epsilon)
+            {
+                return;
+            }
+            Vector3 newFacingDirection = _target.localScale;
+            newFacingDirection.x = direction;
+            _target.localScale = newFacingDirection;
         }
 
         private void MoveByMouseInput()
