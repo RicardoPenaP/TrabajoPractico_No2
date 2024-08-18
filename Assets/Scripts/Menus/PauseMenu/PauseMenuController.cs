@@ -14,6 +14,11 @@ namespace Menus.PauseMenu
     }
     public class PauseMenuController : MonoBehaviour
     {
+        #region Static Variables
+        private static PauseMenuController _instance = null;
+        public static PauseMenuController instance => _instance;
+        #endregion
+        
         #region Editor Variables
         [Header("Pause Menu Controller")]
         [Header("References")]
@@ -28,6 +33,15 @@ namespace Menus.PauseMenu
         #region Unity Methods
         private void Awake()
         {
+            if (_instance is not null && _instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            else
+            {
+                _instance = this;
+            }
             Init();
         }
 
