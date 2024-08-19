@@ -64,7 +64,7 @@ namespace Gameplay.Entities.Common.Actions.Movement
                 return;
             }
             Vector3 newFacingDirection = _target.localScale;
-            newFacingDirection.x = direction;
+            newFacingDirection.x = direction > Mathf.Epsilon? 1 : -1;
             _target.localScale = newFacingDirection;
         }
 
